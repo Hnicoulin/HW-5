@@ -1,23 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
 <head>
-    <meta charset="utf-8">
-    <title>starter code</title>
-<link rel="stylesheet" type="text/css" href="site.css">
+    <title>My Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js">
+    </script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+   
+    <link rel="stylesheet"type="text/css"href="style.css"></link rel>
 </head>
-
 <body>
-<h2>starter project</h2>
-
-<button type="button" id="button1">Button</button>
-<div>
-    <br />
-    <input type="text" val="starting value" text="hello" id="textbox1" />
-    <br />
-</div>
-
-<script src="main.js"></script>
+  <!------------ Page 1: Home ---------------->
+    <div data-role="page" id = "home" data-theme ="b">
+       <div data-role="header">
+            <h1>Friends & Animals</h1>
+          <a href = "#page2"data-role="button" id="bttn1">Add Friends</a>
+        
+            <a href = "#page3"data-role="button" id="bttn2">Friends List</a></button>
+        </div>
+  
+      
+        
+       
+ 
+        <div role="main" class="ui-content">
+          <h3> My favoirte friends & thier favorite animals<h3>
+          
+        </div>
+ 
+        <div data-role="footer">
+            <h4>For Educational Puroposes Only</h4>
+        </div>
+       </div>
+ <!------------------------------------------>
+ <!------------ Page 2: List ---------------->
+   
+     <div data-role="page" id = "page2"data-theme ="b" >
+ 
+        <div data-role="header">
+           <h1>Page 2</h1> 
+            <a href = "#home"data-role="button" id="bttn1">Home</a></button>
+            <a href = "#page3" data-role="button" id="bttn2">Friends List</a></button>
+        </div>
+            
+           
+         
+        <div role="main" class="ui-content">
+   
+        <label for = "friendname">Enter Name: </label>
+        <input name="friendname" id="fdname">
+        <label for = "faveanimal"> Enter Favorite Animal:</label>
+        <input name="faveanimal" id="favani">
+        <button id="submit" onclick="formSubmitEvent()">Submit</button>
+         
+        </div>
+ 
+       <div data-role="footer">
+            <h4>For Educational Puroposes Only</h4>
+        </div>
+ 
+    </div>
+ <!------------------------------------------->
+ <!------------ Page 3: Print ---------------->
+   <div data-role="page" id = "page3" data-theme ="b">
+ 
+        <div data-role="header">
+            <h1>Page 3</h1>
+             <a href = "#home"data-role="button" id="bttn1">Home</a></button>
+            <a href = "#page2" data-role="button" id="bttn2">Add Friend</a></button>
+        </div>
+            
+        
+ 
+        
+ 
+       <div role="main" class="ui-content">
+       
+       <div id="list"></div>
+       </div>
+ 
+        <div data-role="footer">
+            <h4>For Educational Puroposes Only</h4>
+        </div>
+ 
+    </div>
+ <script type="text/javascript" src="event.js"></script>
+  <script type="text/javascript" src="script.js"></script>
 </body>
-
 </html>
